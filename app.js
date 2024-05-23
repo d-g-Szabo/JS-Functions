@@ -46,3 +46,43 @@ function addImage(image) {
 addImage(
   "https://e3.365dm.com/24/04/1600x900/skynews-karen-zoo-ostrich-topeka-zoo_6530559.jpg?20240423111124"
 );
+
+//basic calculator
+function calculator(num1, num2, operator) {
+  if (operator === "+") {
+    return num1 + num2;
+  } else if (operator === "-") {
+    return num1 - num2;
+  } else if (operator === "*") {
+    return num1 * num2;
+  } else if (operator === "/") {
+    return num1 / num2;
+  } else {
+    return "Invalid operator";
+  }
+}
+
+const result = calculator(2, 3, "+");
+console.log("The result is: " + result);
+
+const anotherResult = calculator(6, 6, "*");
+console.log("Another result is: " + anotherResult);
+
+//Another way of writing conditionals using switch
+function switchCalculator(num1, num2, operator) {
+  switch (operator) {
+    case "+":
+      return num1 + num2;
+    case "-":
+      return num1 - num2;
+    case "*":
+      return num1 * num2;
+    case "/":
+      return num1 / num2;
+    default:
+      return "Invalid operator";
+  }
+}
+
+const switchResult = switchCalculator(2, 3, "+");
+console.log("The result is: " + switchResult);
